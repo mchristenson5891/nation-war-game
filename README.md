@@ -47,6 +47,7 @@ start() {
     * Initiate a TIMER in Seconds.
     ** probably going to involve a setInterval(function(), 1000)
 }
+
 isGameOver() {
     * We must check if the game has ended on each and every turn.
     * This method will need to run on each turn.
@@ -54,10 +55,12 @@ isGameOver() {
     * An alert or modal should appear on screen to let the players know that the game is now over.
     * All setInterval() related methods should no longer initiate.
 }
+
 addAttack() {
     * We must give players more uses of infantry, aircraft, and missiles.
     * Perhaps infantry, aircraft, and missiles can regenerate at different rates. 
 }
+
 randomEvent() {
     * A random event could trigger certain changes of property values of each player object.
     * They could take away infantry from a player, or perhaps add more hit points to a city.
