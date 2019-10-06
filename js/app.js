@@ -79,6 +79,8 @@ const game =  {
         this.playerOne = new Player();
         this.playerTwo = new Player();
         
+        console.log(this.playerOne);
+        console.log(this.playerTwo);
     },
     
     reducer() {
@@ -125,19 +127,7 @@ const game =  {
 
 };
 
-// start() {
-
-
-
-// }
-
-// isGameOver() {
-
-// }
-
-// addAttack() {
-
-// }
+game.start()
 
 // randomEvent() {
 //     * A random event could trigger certain changes of property values of each player object.
