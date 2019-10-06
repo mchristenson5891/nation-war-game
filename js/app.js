@@ -4,6 +4,7 @@ class Player {
         this.infantry = 3;
         this.aircraft = 1;
         this.missiles = 0;
+        this.move = false;
     }
 
     // On the DOM, the attack method will need to somehow allow the player to select an attack, and the click will grab a target.
@@ -50,3 +51,92 @@ class Player {
         this.missiles += Math.floor(Math.random() * (3 - 1) + 1);
     }
 }
+
+// Game object will instantiate two objects from the Player class.They will represent Player 1 and Player 2
+
+const game =  {
+// set object properties
+    playerOne,
+    playerTwo,
+    timer = 0,
+    turns = 0,
+    gameOver = false, // boolean 
+
+    // Turns MUST be tracked each time.
+// Initiate a TIMER in Seconds.
+// probably going to involve a setInterval(function (), 1000)
+
+// const array1 = [1, 2, 3, 4];
+// const reducer = (accumulator, currentValue) => accumulator + currentValue;
+    start()  {
+        // new instances of player
+        this.playerOne = new Player();
+        this.playerTwo = new Player();
+    },
+    
+    reducer() {
+        (population, currentCity) => population + currentCity;
+    },
+
+// We must check if the game has ended on each and every turn.
+// This method will need to run on each turn.
+// if Player 1 and Player 2 cities drop to 0, the game is now ended.
+// An alert or modal should appear on screen to let the players know that the game is now over.
+// All setInterval() related methods should no longer initiate.
+    isGameOver()  {
+        if (this.playerOne.cities.reduce(reducer) === 0) {
+            alert("Player 1 defeated!");
+            return "gameover";
+        } else if (this.playerOne.cities.reduce(reducer) === 0) {
+            alert("Player 2 defeated!");
+            return "gameover";
+        } else if (this.playerOne.cities.reduce(reducer) === 0 && this.playerTwo.cities.reduce(reducer) === 0) {
+            alert("Mutually Assured Destruction!");
+            return "gameover";
+        }
+        
+    },
+
+//     * We must give players more uses of infantry, aircraft, and missiles.
+//     * Perhaps infantry, aircraft, and missiles can regenerate at different rates. 
+    addAttack() {
+        if (this.turns % 4 === 0) {
+            this.playerOne.infantry++;
+            this.playerTwo.infantry++;
+        }
+        
+        if (this.turns % 6 === 0) {
+            this.playerOne.aircraft++;
+            this.playerTwo.aircraft++;
+        }
+
+        if (this.turns >= 30 && this.turns % 6 === 0) {
+            this.playerOne.missiles++;
+            this.playerTwo.missiles++;
+        }
+    },
+
+};
+
+// start() {
+
+
+
+// }
+
+// isGameOver() {
+
+// }
+
+// addAttack() {
+
+// }
+
+// randomEvent() {
+//     * A random event could trigger certain changes of property values of each player object.
+//     * They could take away infantry from a player, or perhaps add more hit points to a city.
+//     * Math.random() being less than a decimal number(like 0.5) could determine this chance.
+//     * Random events will keep increasing in chance over time to simulate the effects of the war.
+//     * "Faulty aircraft" "Military Desertion" "Famine" "Plague" "Business Cycle Events" "Natural Disaster"
+//         * "Baby Boom" "Scientific Discovery" "Technological Advancement" "Bio-economic Age" "Future of Work" "Military Fervor"
+// }
