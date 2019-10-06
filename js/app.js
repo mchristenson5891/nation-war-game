@@ -56,11 +56,11 @@ class Player {
 
 const game =  {
 // set object properties
-    playerOne,
-    playerTwo,
-    timer = 0,
-    turns = 0,
-    gameOver = false, // boolean 
+    playerOne : 0,
+    playerTwo : 0,
+    timer : 0,
+    turns : 0,
+    gameOver : false, // boolean 
 
     // Turns MUST be tracked each time.
 // Initiate a TIMER in Seconds.
