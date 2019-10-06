@@ -1,6 +1,7 @@
 class Player {
     constructor() {
-        this.cities = [100, 75, 50, 25];
+        // this.cities = [100, 75, 50, 25];
+        this.cities = 25;
         this.infantry = 3;
         this.aircraft = 1;
         this.missiles = 0;
@@ -13,27 +14,32 @@ class Player {
     // This method will also decrement(-1) this.infantry
 
     attackInfantry(target) {
-        target.damage -= Math.floor(Math.random() * (5 - 1) + 1);
+        console.log(target, "is the target");
+        let damage = Math.floor(Math.random() * (5 - 1) + 1);
         this.infantry -= 1; // remove 1 infantry
         this.moved = true;
+        target.cities -= damage;
+       
     }
 
     // We will use a Math.random() and Math.floor() to initiate an attack value that has a maximum of 10.
     // This method will also decrement(-1) this.aircraft
 
     attackAircraft(target) {
-        target.damage -= Math.floor(Math.random() * (10-5) + 5);
+        let damage = Math.floor(Math.random() * (10-5) + 5);
         this.aircraft -= 1;
         this.moved = true;
+        target.cities -= damage;
     }
 
     // We will use a Math.random() and Math.floor() to initiate an attack value that has a maximum of 20
     // This method will also decrement(-1) this.missiles
 
     attackMissiles(target) {
-        target.damage -= Math.floor(Math.random() * (20 - 10) + 10 );
+        let damage = Math.floor(Math.random() * (20 - 10) + 10 );
         this.missiles -= 1;
         this.moved = true;
+        target.cities -= damage;
     }
 
     // Player is able to build between 3 to 10 infantry
@@ -62,8 +68,8 @@ class Player {
 
 const game =  {
 // set object properties
-    playerOne : 0,
-    playerTwo : 0,
+    playerOne : {},
+    playerTwo : {},
     timer : 0,
     turns : 0,
     gameOver : false, // boolean 
@@ -72,13 +78,16 @@ const game =  {
 // Initiate a TIMER in Seconds.
 // probably going to involve a setInterval(function (), 1000)
 
+
+    
+
+
 // const array1 = [1, 2, 3, 4];
 // const reducer = (accumulator, currentValue) => accumulator + currentValue;
     start()  {
         // new instances of player
         this.playerOne = new Player();
         this.playerTwo = new Player();
-        
         console.log(this.playerOne);
         console.log(this.playerTwo);
     },
@@ -128,6 +137,9 @@ const game =  {
 };
 
 game.start()
+console.log(game.playerOne.attackInfantry(game.playerTwo));
+
+console.log(game.playerTwo.cities);
 
 // randomEvent() {
 //     * A random event could trigger certain changes of property values of each player object.
