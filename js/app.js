@@ -175,11 +175,37 @@ $('#infantryP2CityTwo').on('click', function (e) {
 
 // player one attack player two city THREE
 
-$('#infantryP2CityThree').on('click', function (e) {
+$('#aircraftP2CityThree').on('click', function (e) {
     e.preventDefault();
-    game.playerOne.attackInfantry(game.playerTwo, "cityThree");
+    game.playerOne.attackAircraft(game.playerTwo, "cityThree");
     console.log(game.playerTwo);
 });
+
+//  player one attack player two city ONE
+
+$('#aircraftP2CityOne').on('click', function (e) {
+    e.preventDefault();
+    game.playerOne.attackAircraft(game.playerTwo, "cityOne");
+    console.log(game.playerTwo);
+});
+
+// player one attack player two city TWO
+
+$('#aircraftP2CityTwo').on('click', function (e) {
+    e.preventDefault();
+    game.playerOne.attackAircraft(game.playerTwo, "cityTwo");
+    console.log(game.playerTwo);
+});
+
+
+// player one attack player two city THREE
+
+$('#aircraftP2CityThree').on('click', function (e) {
+    e.preventDefault();
+    game.playerOne.attackAircraft(game.playerTwo, "cityThree");
+    console.log(game.playerTwo);
+});
+
 
 // PLAYER 2
 //  player two attack player one city ONE
