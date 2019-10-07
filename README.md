@@ -3,6 +3,16 @@ GA-SEI-CC-5 JavaScript Video Game
 
 # Nation War Designing.
 
+- Build Player class and Game object.
+- Build basic constructors, attack methods, build methods
+- Area and Map elements for HTML will be clickable.
+- Gather image(s) and coordinate numbers for area and map
+- Test if onClick functions will work on hot spots.
+- Make onClick methods call attack functions.
+- Switch turns correctly after each player attacks.
+- Implement a minutes timer at the top.
+
+
 ## Class Player 
 constructor {
     this.cities = [100, 75, 50, 25]
