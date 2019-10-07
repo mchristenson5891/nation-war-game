@@ -118,6 +118,15 @@ const game =  {
 
         const playerTwoCities = this.playerTwo.cityOne + this.playerTwo.cityTwo + this.playerTwo.cityThree;
         
+        // needs to kill game running
+        if (playerOneCities < 1) {
+            alert(`Player One has lost all their cities!`);
+        } else if (playerTwoCities < 1) {
+            alert('Player Two has lost all theri cities!');
+        } else if (playerOneCities < 1 && playerTwoCities < 1) {
+            alert(`Mutually Assured Destruction!`);
+        }
+
     },
 
 //     * We must give players more uses of infantry, aircraft, and missiles.
