@@ -7,10 +7,6 @@ body {
     background-size: 4500px;
 }
 
-#cityOne {
-    border: 1px solid black;
-}
-
 #africa-map {
     display: block;
     margin-left: auto;

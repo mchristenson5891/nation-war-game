@@ -150,6 +150,8 @@ const game =  {
 
 };
 
+// event handlers
+
 game.start()
 console.log(game.playerOne.attackInfantry(game.playerTwo));
 
@@ -163,3 +165,4 @@ console.log(game.playerTwo.cityOne);
 //     * "Faulty aircraft" "Military Desertion" "Famine" "Plague" "Business Cycle Events" "Natural Disaster"
 //         * "Baby Boom" "Scientific Discovery" "Technological Advancement" "Bio-economic Age" "Future of Work" "Military Fervor"
 // }
+
