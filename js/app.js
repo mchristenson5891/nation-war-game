@@ -15,33 +15,33 @@ class Player {
     // We will use a Math.random() and Math.floor() to initiate an attack value that has a maximum of 5.
     // This method will also decrement(-1) this.infantry
 
-    attackInfantry(target) {
+    attackInfantry(target, city) {
         console.log(target, "is the target");
         let damage = Math.floor(Math.random() * (5 - 1) + 1);
         this.infantry -= 1; // remove 1 infantry
         this.moved = true;
-        return target.cityOne -= damage; 
+        return target[city] -= damage; 
     }
 
     // We will use a Math.random() and Math.floor() to initiate an attack value that has a maximum of 10.
     // This method will also decrement(-1) this.aircraft
 
-    attackAircraft(target) {
+    attackAircraft(target, city) {
         let damage = Math.floor(Math.random() * (10-5) + 5);
         this.aircraft -= 1;
         this.moved = true;
         // åreturn target.cityOne -= damage;
-        return target -= damage;
+        return target[city] -= damage;
     }
 
     // We will use a Math.random() and Math.floor() to initiate an attack value that has a maximum of 20
     // This method will also decrement(-1) this.missiles
 
-    attackMissiles(target) {
+    attackMissiles(target, city) {
         let damage = Math.floor(Math.random() * (20 - 10) + 10 );
         this.missiles -= 1;
         this.moved = true;
-        return target.cityOne -= damage;
+        return target[city] -= damage;
     }
 
     // Player is able to build between 3 to 10 infantry
@@ -150,12 +150,21 @@ const game =  {
 
 };
 
+game.start();
+
 // event handlers
+$('#p1AreaCityOne').on('click', function(e) {
+    e.preventDefault();
+    game.playerTwo.attackInfantry(game.playerOne, "cityOne");
+    console.log(game.playerOne);
+} );
 
-game.start()
-console.log(game.playerOne.attackInfantry(game.playerTwo));
 
-console.log(game.playerTwo.cityOne);
+
+
+// console.log(game.playerOne.attackInfantry(game.playerTwo));
+
+// console.log(game.playerTwo.cityOne);
 
 // randomEvent() {
 //     * A random event could trigger certain changes of property values of each player object.
