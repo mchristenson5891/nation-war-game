@@ -146,6 +146,7 @@ const game =  {
             // set moved boolean back to false
             this.playerOne.moved = false;
             this.playerTwo.moved = false;
+            console.log("Turns completed: " + this.turns);
         }
 
         // check if game over conditions are met
