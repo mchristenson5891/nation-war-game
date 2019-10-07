@@ -19,7 +19,10 @@ class Player {
     attackInfantry(target, city) {
         if (this.infantry < 1) {
             alert("No infantry left!");
-            continue;
+            return;
+        } else if (this.moved === true) {
+            alert(this.name + " has already moved!");
+            return;
         }
 
         let damage = Math.floor(Math.random() * (5 - 1) + 1);
@@ -36,10 +39,10 @@ class Player {
     attackAircraft(target, city) {
         if (this.aircraft < 1) {
             alert("No aircraft left!");
-            continue;
+            return;
         } else if (this.moved === true) {
             alert(this.name + " has already moved!");
-            continue;
+            return;
         }
         
         let damage = Math.floor(Math.random() * (10-5) + 5);
@@ -56,10 +59,10 @@ class Player {
     attackMissiles(target, city) {
         if (this.infantry < 1) {
             alert("No infantry left!");
-            continue;
+            return;
         } else if (this.moved === true) {
             alert(this.name + " has already moved!");
-            continue;
+            return;
         }
         
         let damage = Math.floor(Math.random() * (20 - 10) + 10 );
@@ -75,7 +78,7 @@ class Player {
     buildInfantry() {
         if (this.moved === true) {
             alert(this.name + " has already moved!");
-            continue;
+            return;
         }
 
         this.infantry += Math.floor(Math.random() * (10 - 3) + 3 );
@@ -87,7 +90,7 @@ class Player {
     buildAircraft() {
         if (this.moved === true) {
             alert(this.name + " has already moved!");
-            continue;
+            return;
         }
         
         this.aircraft += Math.floor(Math.random() * (5 - 3) + 3 );
@@ -99,7 +102,7 @@ class Player {
     buildMissiles() {
         if (this.moved === true) {
             alert(this.name + " has already moved!");
-            continue;
+            return;
         }
         
         this.missiles += Math.floor(Math.random() * (3 - 1) + 1);
