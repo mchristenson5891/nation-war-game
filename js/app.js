@@ -153,11 +153,20 @@ const game =  {
 game.start();
 
 // event handlers
+
+// attack player one city one
 $('#p1AreaCityOne').on('click', function(e) {
     e.preventDefault();
     game.playerTwo.attackInfantry(game.playerOne, "cityOne");
     console.log(game.playerOne);
 } );
+
+// attack player one city one
+$('#p1AreaCityTwo').on('click', function (e) {
+    e.preventDefault();
+    game.playerTwo.attackInfantry(game.playerOne, "cityTwo");
+    console.log(game.playerOne);
+});
 
 
 
