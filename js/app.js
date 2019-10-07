@@ -156,7 +156,7 @@ game.start();
 // event handlers
 // PLAYER 1
 
-//  player one attack player two city ONE
+// INFANTRY player one attack player two city ONE
 
 $('#infantryP2CityOne').on('click', function (e) {
     e.preventDefault();
@@ -164,7 +164,7 @@ $('#infantryP2CityOne').on('click', function (e) {
     console.log(game.playerTwo);
 });
 
-// player one attack player two city TWO
+// INFANTRY player one attack player two city TWO
 
 $('#infantryP2CityTwo').on('click', function (e) {
     e.preventDefault();
@@ -173,15 +173,15 @@ $('#infantryP2CityTwo').on('click', function (e) {
 });
 
 
-// player one attack player two city THREE
+// INFANTRY player one attack player two city THREE
 
-$('#aircraftP2CityThree').on('click', function (e) {
+$('#infantryP2CityThree').on('click', function (e) {
     e.preventDefault();
-    game.playerOne.attackAircraft(game.playerTwo, "cityThree");
+    game.playerOne.attackInfantry(game.playerTwo, "cityThree");
     console.log(game.playerTwo);
 });
 
-//  player one attack player two city ONE
+// AIRCRAFT player one attack player two city ONE
 
 $('#aircraftP2CityOne').on('click', function (e) {
     e.preventDefault();
@@ -189,7 +189,7 @@ $('#aircraftP2CityOne').on('click', function (e) {
     console.log(game.playerTwo);
 });
 
-// player one attack player two city TWO
+// AIRCRAFT player one attack player two city TWO
 
 $('#aircraftP2CityTwo').on('click', function (e) {
     e.preventDefault();
@@ -198,7 +198,7 @@ $('#aircraftP2CityTwo').on('click', function (e) {
 });
 
 
-// player one attack player two city THREE
+// AIRCRAFT player one attack player two city THREE
 
 $('#aircraftP2CityThree').on('click', function (e) {
     e.preventDefault();
@@ -206,9 +206,34 @@ $('#aircraftP2CityThree').on('click', function (e) {
     console.log(game.playerTwo);
 });
 
+// MISSILES player one attack player two city ONE
+
+$('#missilesP2CityOne').on('click', function (e) {
+    e.preventDefault();
+    game.playerOne.attackMissiles(game.playerTwo, "cityOne");
+    console.log(game.playerTwo);
+});
+
+// MISSILES player one attack player two city TWO
+
+$('#missilesP2CityTwo').on('click', function (e) {
+    e.preventDefault();
+    game.playerOne.attackMissiles(game.playerTwo, "cityTwo");
+    console.log(game.playerTwo);
+});
+
+
+// MISSILES player one attack player two city THREE
+
+$('#missilesP2CityThree').on('click', function (e) {
+    e.preventDefault();
+    game.playerOne.attackMissiles(game.playerTwo, "cityThree");
+    console.log(game.playerTwo);
+});
+
 
 // PLAYER 2
-//  player two attack player one city ONE
+// INFANTRY player two attack player one city ONE
 $('#p1AreaCityOne').on('click', function(e) {
     e.preventDefault();
     game.playerTwo.attackInfantry(game.playerOne, "cityOne");
@@ -221,7 +246,7 @@ $('#infantryP1CityOne').on('click', function (e) {
     console.log(game.playerOne);
 });
 
-// player two attack player one city TWO
+// INFANTRY player two attack player one city TWO
 $('#p1AreaCityTwo').on('click', function (e) {
     e.preventDefault();
     game.playerTwo.attackInfantry(game.playerOne, "cityTwo");
@@ -235,11 +260,36 @@ $('#infantryP1CityTwo').on('click', function (e) {
 });
 
 
-// player two attack player one city THREE
+// INFANTRY player two attack player one city THREE
 
 $('#infantryP1CityThree').on('click', function (e) {
     e.preventDefault();
     game.playerTwo.attackInfantry(game.playerOne, "cityThree");
+    console.log(game.playerOne);
+});
+
+// AIRCRAFT player two attack player one city ONE
+
+$('#aircraftP1CityOne').on('click', function (e) {
+    e.preventDefault();
+    game.playerTwo.attackAircraft(game.playerOne, "cityOne");
+    console.log(game.playerOne);
+});
+
+// AIRCRAFT player two attack player one city TWO
+
+$('#aircraftP1CityTwo').on('click', function (e) {
+    e.preventDefault();
+    game.playerTwo.attackAircraft(game.playerOne, "cityTwo");
+    console.log(game.playerOne);
+});
+
+
+// AIRCRAFT player two attack player one city THREE
+
+$('#aircraftP1CityThree').on('click', function (e) {
+    e.preventDefault();
+    game.playerTwo.attackAircraft(game.playerOne, "cityThree");
     console.log(game.playerOne);
 });
 
