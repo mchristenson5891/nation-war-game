@@ -77,7 +77,6 @@ const game =  {
     turns : 0,
     gameOver : false, // boolean 
 
-    // Turns MUST be tracked each time.
 // Initiate a TIMER in Seconds.
 // probably going to involve a setInterval(function (), 1000)
 
@@ -93,6 +92,16 @@ const game =  {
         this.playerTwo = new Player("Player 2");
         console.log(this.playerOne, " playerOne");
         console.log(this.playerTwo , " playerTwo");
+    },
+
+// Turns MUST be tracked each time.
+    turnCheck() {
+        // check if gameover conditions are met
+        this.isGameOver();
+        
+        if (game.playerOne.moved === true && game.playerTwo.moved === true) {
+            this.turns++;
+        }
     },
     
     reducer() {
@@ -122,10 +131,13 @@ const game =  {
         // needs to kill game running
         if (playerOneCities < 1) {
             alert(`Player One has lost all their cities!`);
+            this.gameOver = true;
         } else if (playerTwoCities < 1) {
             alert('Player Two has lost all theri cities!');
+            this.gameOver = true;
         } else if (playerOneCities < 1 && playerTwoCities < 1) {
             alert(`Mutually Assured Destruction!`);
+            this.gameOver = true;
         }
 
     },
