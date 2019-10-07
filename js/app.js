@@ -1,7 +1,9 @@
 class Player {
     constructor() {
-        // this.cities = [100, 75, 50, 25];
-        this.cities = 25;
+        // this.cities = [100, 75, 50];
+        this.cityOne = 100;
+        this.cityTwo = 75;
+        this.cityThree = 50;
         this.infantry = 3;
         this.aircraft = 1;
         this.missiles = 0;
@@ -18,8 +20,7 @@ class Player {
         let damage = Math.floor(Math.random() * (5 - 1) + 1);
         this.infantry -= 1; // remove 1 infantry
         this.moved = true;
-        target.cities -= damage;
-       
+        return target.cityOne -= damage; 
     }
 
     // We will use a Math.random() and Math.floor() to initiate an attack value that has a maximum of 10.
@@ -29,7 +30,8 @@ class Player {
         let damage = Math.floor(Math.random() * (10-5) + 5);
         this.aircraft -= 1;
         this.moved = true;
-        target.cities -= damage;
+        // åreturn target.cityOne -= damage;
+        return target -= damage;
     }
 
     // We will use a Math.random() and Math.floor() to initiate an attack value that has a maximum of 20
@@ -39,7 +41,7 @@ class Player {
         let damage = Math.floor(Math.random() * (20 - 10) + 10 );
         this.missiles -= 1;
         this.moved = true;
-        target.cities -= damage;
+        return target.cityOne -= damage;
     }
 
     // Player is able to build between 3 to 10 infantry
@@ -88,8 +90,8 @@ const game =  {
         // new instances of player
         this.playerOne = new Player();
         this.playerTwo = new Player();
-        console.log(this.playerOne);
-        console.log(this.playerTwo);
+        console.log(this.playerOne, " playerOne");
+        console.log(this.playerTwo , " playerTwo");
     },
     
     reducer() {
@@ -102,16 +104,19 @@ const game =  {
 // An alert or modal should appear on screen to let the players know that the game is now over.
 // All setInterval() related methods should no longer initiate.
     isGameOver()  {
-        if (this.playerOne.cities.reduce(reducer) === 0) {
-            alert("Player 1 defeated!");
-            return "gameover";
-        } else if (this.playerOne.cities.reduce(reducer) === 0) {
-            alert("Player 2 defeated!");
-            return "gameover";
-        } else if (this.playerOne.cities.reduce(reducer) === 0 && this.playerTwo.cities.reduce(reducer) === 0) {
-            alert("Mutually Assured Destruction!");
-            return "gameover";
-        }
+        // if (this.playerOne.cities.reduce(reducer) === 0) {
+        //     alert("Player 1 defeated!");
+        //     return "gameover";
+        // } else if (this.playerOne.cities.reduce(reducer) === 0) {
+        //     alert("Player 2 defeated!");
+        //     return "gameover";
+        // } else if (this.playerOne.cities.reduce(reducer) === 0 && this.playerTwo.cities.reduce(reducer) === 0) {
+        //     alert("Mutually Assured Destruction!");
+        //     return "gameover";
+        // }
+        const playerOneCities = this.playerOne.cityOne + this.playerOne.cityTwo + this.playerOne.cityThree;
+
+        const playerTwoCities = this.playerTwo.cityOne + this.playerTwo.cityTwo + this.playerTwo.cityThree;
         
     },
 
@@ -139,7 +144,7 @@ const game =  {
 game.start()
 console.log(game.playerOne.attackInfantry(game.playerTwo));
 
-console.log(game.playerTwo.cities);
+console.log(game.playerTwo.cityOne);
 
 // randomEvent() {
 //     * A random event could trigger certain changes of property values of each player object.
