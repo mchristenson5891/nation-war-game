@@ -17,37 +17,67 @@ class Player {
     // This method will also decrement(-1) this.infantry
 
     attackInfantry(target, city) {
-        // console.log(target, "is the target");
+        if (this.infantry < 1) {
+            alert("No infantry left!");
+            continue;
+        }
+
         let damage = Math.floor(Math.random() * (5 - 1) + 1);
-        this.infantry -= 1; // remove 1 infantry
+        this.infantry -= 1; // remove 1 infantry  
+        target[city] -= damage; 
         this.moved = true;
-        return target[city] -= damage; 
+
+        game.turnCheck(); // check on each player action
     }
 
     // We will use a Math.random() and Math.floor() to initiate an attack value that has a maximum of 10.
     // This method will also decrement(-1) this.aircraft
 
     attackAircraft(target, city) {
+        if (this.aircraft < 1) {
+            alert("No aircraft left!");
+            continue;
+        } else if (this.moved === true) {
+            alert(this.name + " has already moved!");
+            continue;
+        }
+        
         let damage = Math.floor(Math.random() * (10-5) + 5);
         this.aircraft -= 1;
+        target[city] -= damage;
         this.moved = true;
-        // åreturn target.cityOne -= damage;
-        return target[city] -= damage;
+
+        game.turnCheck(); // check on each player action
     }
 
     // We will use a Math.random() and Math.floor() to initiate an attack value that has a maximum of 20
     // This method will also decrement(-1) this.missiles
 
     attackMissiles(target, city) {
+        if (this.infantry < 1) {
+            alert("No infantry left!");
+            continue;
+        } else if (this.moved === true) {
+            alert(this.name + " has already moved!");
+            continue;
+        }
+        
         let damage = Math.floor(Math.random() * (20 - 10) + 10 );
         this.missiles -= 1;
+        target[city] -= damage;
         this.moved = true;
-        return target[city] -= damage;
+
+        game.turnCheck(); // check on each player action
     }
 
     // Player is able to build between 3 to 10 infantry
 
     buildInfantry() {
+        if (this.moved === true) {
+            alert(this.name + " has already moved!");
+            continue;
+        }
+
         this.infantry += Math.floor(Math.random() * (10 - 3) + 3 );
         this.moved = true;
     }
@@ -55,6 +85,11 @@ class Player {
     // Player is able to build between 3 to 5 aircraft
 
     buildAircraft() {
+        if (this.moved === true) {
+            alert(this.name + " has already moved!");
+            continue;
+        }
+        
         this.aircraft += Math.floor(Math.random() * (5 - 3) + 3 );
         this.moved = true;
     }
@@ -62,6 +97,11 @@ class Player {
     // Player is able to build between 1 to 3 missiles
 
     buildMissiles() {
+        if (this.moved === true) {
+            alert(this.name + " has already moved!");
+            continue;
+        }
+        
         this.missiles += Math.floor(Math.random() * (3 - 1) + 1);
         this.moved = true;
     }
@@ -96,12 +136,18 @@ const game =  {
 
 // Turns MUST be tracked each time.
     turnCheck() {
-        // check if gameover conditions are met
-        this.isGameOver();
         
         if (game.playerOne.moved === true && game.playerTwo.moved === true) {
             this.turns++;
+
+            // set moved boolean back to false
+            this.playerOne.moved = false;
+            this.playerTwo.moved = false;
         }
+
+        // check if game over conditions are met
+        // playerTwo still gets equal number of turns
+        this.isGameOver();
     },
     
     reducer() {
