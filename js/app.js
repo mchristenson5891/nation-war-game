@@ -293,6 +293,32 @@ $('#aircraftP1CityThree').on('click', function (e) {
     console.log(game.playerOne);
 });
 
+// MISSILES player two attack player one city ONE
+
+$('#missilesP1CityOne').on('click', function (e) {
+    e.preventDefault();
+    game.playerTwo.attackMissiles(game.playerOne, "cityOne");
+    console.log(game.playerOne);
+});
+
+// MISSILES player two attack player one city TWO
+
+$('#missilesP1CityTwo').on('click', function (e) {
+    e.preventDefault();
+    game.playerTwo.attackMissiles(game.playerOne, "cityTwo");
+    console.log(game.playerOne);
+});
+
+
+// MISSILES player two attack player one city THREE
+
+$('#missilesP1CityThree').on('click', function (e) {
+    e.preventDefault();
+    game.playerTwo.attackMissiles(game.playerOne, "cityThree");
+    console.log(game.playerOne);
+});
+
+
 
 // randomEvent() {
 //     * A random event could trigger certain changes of property values of each player object.
