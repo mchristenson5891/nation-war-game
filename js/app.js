@@ -1,6 +1,7 @@
 class Player {
-    constructor() {
+    constructor(name) {
         // this.cities = [100, 75, 50];
+        this.name = name;
         this.cityOne = 100;
         this.cityTwo = 75;
         this.cityThree = 50;
@@ -16,7 +17,7 @@ class Player {
     // This method will also decrement(-1) this.infantry
 
     attackInfantry(target, city) {
-        console.log(target, "is the target");
+        // console.log(target, "is the target");
         let damage = Math.floor(Math.random() * (5 - 1) + 1);
         this.infantry -= 1; // remove 1 infantry
         this.moved = true;
@@ -88,8 +89,8 @@ const game =  {
 // const reducer = (accumulator, currentValue) => accumulator + currentValue;
     start()  {
         // new instances of player
-        this.playerOne = new Player();
-        this.playerTwo = new Player();
+        this.playerOne = new Player("Player 1");
+        this.playerTwo = new Player("Player 2");
         console.log(this.playerOne, " playerOne");
         console.log(this.playerTwo , " playerTwo");
     },
@@ -129,8 +130,8 @@ const game =  {
 
     },
 
-//     * We must give players more uses of infantry, aircraft, and missiles.
-//     * Perhaps infantry, aircraft, and missiles can regenerate at different rates. 
+// We must give players more uses of infantry, aircraft, and missiles.
+// Perhaps infantry, aircraft, and missiles can regenerate at different rates. 
     addAttack() {
         if (this.turns % 4 === 0) {
             this.playerOne.infantry++;
@@ -153,27 +154,69 @@ const game =  {
 game.start();
 
 // event handlers
+// PLAYER 1
 
-// attack player one city one
+//  player one attack player two city ONE
+
+$('#infantryP2CityOne').on('click', function (e) {
+    e.preventDefault();
+    game.playerOne.attackInfantry(game.playerTwo, "cityOne");
+    console.log(game.playerTwo);
+});
+
+// player one attack player two city TWO
+
+$('#infantryP2CityTwo').on('click', function (e) {
+    e.preventDefault();
+    game.playerOne.attackInfantry(game.playerTwo, "cityTwo");
+    console.log(game.playerTwo);
+});
+
+
+// player one attack player two city THREE
+
+$('#infantryP2CityThree').on('click', function (e) {
+    e.preventDefault();
+    game.playerOne.attackInfantry(game.playerTwo, "cityThree");
+    console.log(game.playerTwo);
+});
+
+// PLAYER 2
+//  player two attack player one city ONE
 $('#p1AreaCityOne').on('click', function(e) {
     e.preventDefault();
     game.playerTwo.attackInfantry(game.playerOne, "cityOne");
     console.log(game.playerOne);
 } );
 
-// attack player one city one
+$('#infantryP1CityOne').on('click', function (e) {
+    e.preventDefault();
+    game.playerTwo.attackInfantry(game.playerOne, "cityOne");
+    console.log(game.playerOne);
+});
+
+// player two attack player one city TWO
 $('#p1AreaCityTwo').on('click', function (e) {
     e.preventDefault();
     game.playerTwo.attackInfantry(game.playerOne, "cityTwo");
     console.log(game.playerOne);
 });
 
+$('#infantryP1CityTwo').on('click', function (e) {
+    e.preventDefault();
+    game.playerTwo.attackInfantry(game.playerOne, "cityTwo");
+    console.log(game.playerOne);
+});
 
 
+// player two attack player one city THREE
 
-// console.log(game.playerOne.attackInfantry(game.playerTwo));
+$('#infantryP1CityThree').on('click', function (e) {
+    e.preventDefault();
+    game.playerTwo.attackInfantry(game.playerOne, "cityThree");
+    console.log(game.playerOne);
+});
 
-// console.log(game.playerTwo.cityOne);
 
 // randomEvent() {
 //     * A random event could trigger certain changes of property values of each player object.
