@@ -1,0 +1,8 @@
+body {
+    max-width: 570px;
+    background-image: url("../img/worldmap.jpg");
+    background-position-x: 55%; 
+    background-position-y: 30%;
+    background-repeat: no-repeat;
+    background-size: 4500px;
+}
