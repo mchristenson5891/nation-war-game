@@ -2,11 +2,14 @@ body {
     max-width: 720px;
     background-image: url("../img/Kiska.png");
     background-position-x: 50%; 
-    background-position-y: -20%;
+    /* background-position-y: -100%; */
     background-repeat: no-repeat;
-    /* background-size: 4500px; */
+    background-size: 125%;
 }
 
+#stats-container {
+    position: relative;
+}
 
 #africa-map {
     display: block;
