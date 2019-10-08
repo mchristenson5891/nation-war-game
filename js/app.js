@@ -57,8 +57,8 @@ class Player {
     // This method will also decrement(-1) this.missiles
 
     attackMissiles(target, city) {
-        if (this.infantry < 1) {
-            alert("No infantry left!");
+        if (this.missiles < 1) {
+            alert("No missiles left!");
             return;
         } else if (this.moved === true) {
             alert(this.name + " has already moved!");
@@ -398,6 +398,26 @@ $('#missilesP1CityThree').on('click', function (e) {
     game.playerTwo.attackMissiles(game.playerOne, "cityThree");
     console.log(game.playerOne);
 });
+
+// BUILD player two Infantry, Aircraft, Missiles
+$('#buildInfantryP2').on('click', function (e) {
+    e.preventDefault();
+    game.playerTwo.buildInfantry();
+    console.log(game.playerTwo.infantry, " P2 Infantry");
+});
+
+$('#buildAircraftP2').on('click', function (e) {
+    e.preventDefault();
+    game.playerTwo.buildAircraft();
+    console.log(game.playerTwo.aircraft, " P2 Aircraft");
+});
+
+$('#buildMissilesP2').on('click', function (e) {
+    e.preventDefault();
+    game.playerTwo.buildMissiles();
+    console.log(game.playerTwo.missiles, " P2 Missiles");
+});
+
 
 
 
