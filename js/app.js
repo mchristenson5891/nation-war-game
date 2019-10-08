@@ -135,11 +135,13 @@ const game =  {
         this.playerTwo = new Player("Player 2");
         console.log(this.playerOne, " playerOne");
         console.log(this.playerTwo , " playerTwo");
+        this.displayStats(); // start displaying stats
     },
 
 // Turns MUST be tracked each time.
     turnCheck() {
-        
+        this.displayStats();
+
         if (game.playerOne.moved === true && game.playerTwo.moved === true) {
             this.turns++;
 
@@ -154,6 +156,41 @@ const game =  {
         this.isGameOver();
     },
     
+    displayStats() {
+        // <div id="p1StatsList">
+        //     <p id="nameTagP1">Name: </p>
+        //     <p id="infantryNumP1">Infantry: </p>
+        //     <p id="aircraftNumP1">Aircraft: </p>
+        //     <p id="missilesNumP1">Missiles </p>
+        // </div>
+        const nameP1 = document.querySelector('#nameTagP1');
+        const infantryP1 = document.querySelector('#infantryNumP1');
+        const aircraftP1 = document.querySelector('#aircraftNumP1');
+        const missilesP1 = document.querySelector('#missilesNumP1');
+
+        //     <div id="p2StatsList">
+        //         <p id="nameTagP2">Name: </p>
+        //         <p id="infantryNumP2">Infantry: </p>
+        //         <p id="aircraftNumP2">Aircraft: </p>
+        //         <p id="missilesNumP2">Missiles: </p>
+        //     </div>
+        const nameP2 = document.querySelector('#nameTagP2');
+        const infantryP2 = document.querySelector('#infantryNumP2');
+        const aircraftP2 = document.querySelector('#aircraftNumP2');
+        const missilesP2 = document.querySelector('#missilesNumP2');
+        
+        nameP1.innerText = `Name: ${game.playerOne.name}`;
+        infantryP1.innerText= `Infantry: ${game.playerOne.infantry}`;
+        aircraftP1.innerText =`Aircraft: ${game.playerOne.aircraft}`;
+        missilesP1.innerText = `Missiles: ${game.playerOne.missiles}`;
+
+        nameP2.innerText = `Name: ${game.playerTwo.name}`;
+        infantryP2.innerText =`Infantry: ${game.playerTwo.infantry}`;
+        aircraftP2.innerText =`Aircraft: ${game.playerTwo.aircraft}`;
+        missilesP2.innerText =`Missiles: ${game.playerTwo.missiles}`;
+
+    },
+
     reducer() {
         (population, currentCity) => population + currentCity;
     },
