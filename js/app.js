@@ -293,6 +293,25 @@ $('#missilesP2CityThree').on('click', function (e) {
     console.log(game.playerTwo);
 });
 
+// BUILD player one Infantry, Aircraft, Missiles
+$('#buildInfantryP1').on('click', function (e) {
+    e.preventDefault();
+    game.playerOne.buildInfantry();
+    console.log(game.playerOne.infantry, " P1 Infantry");
+});
+
+$('#buildAircraftP1').on('click', function (e) {
+    e.preventDefault();
+    game.playerOne.buildAircraft();
+    console.log(game.playerOne.aircraft, " P1 Aircraft");
+});
+
+$('#buildMissilesP1').on('click', function (e) {
+    e.preventDefault();
+    game.playerOne.buildMissiles();
+    console.log(game.playerOne.missiles, " P1 Missiles");
+});
+
 
 // PLAYER 2
 // INFANTRY player two attack player one city ONE
