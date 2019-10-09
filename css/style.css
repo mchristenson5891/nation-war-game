@@ -1,5 +1,6 @@
 body {
-    max-width: 720px;
+    min-width: 800px;
+    max-width: 1280px;
     background-image: url("../img/Kiska.png");
     background-position-x: 50%; 
     /* background-position-y: -100%; */
@@ -9,6 +10,13 @@ body {
 
 #stats-container {
     position: relative;
+    color: red;
+}
+
+#stats-container #p2StatsList {
+    position: relative;
+    bottom: 11.1rem;
+    text-align: right;
 }
 
 #africa-map {
