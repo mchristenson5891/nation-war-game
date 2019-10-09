@@ -2,10 +2,11 @@ body {
     min-width: 800px;
     max-width: 1280px;
     background-image: url("../img/Kiska.png");
+    background-size: 1280px 800px;
     background-position-x: 50%; 
     /* background-position-y: -100%; */
     background-repeat: no-repeat;
-    background-size: 125%;
+    /* background-size: 125%; */
 }
 
 #stats-container {
@@ -30,4 +31,22 @@ body {
 
 .jumbotron {
     background-color: rgba(0, 0, 0, 0.3);
+}
+
+.container-fluid {
+    position: absolute;
+    top: 520px;
+    background-image: url("../img/footerimage.png");
+    background-repeat: no-repeat;
+}
+
+.container-fluid #container-left {
+    position: relative;
+    bottom: 10px;
+}
+
+.container-fluid #container-right {
+    position: absolute;
+    left: 1080px;
+    bottom: 10px;
 }
