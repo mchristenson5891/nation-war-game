@@ -12,6 +12,15 @@ GA-SEI-CC-5 JavaScript Video Game
 - Switch turns correctly after each player attacks.
 - Implement a minutes timer at the top.
 
+## User Stories
+- The game gives an alert which starts the game.
+- Two players can play the game, clicking buttons to interact.
+- Buttons will send infantry, aircraft, missile attacks to certain cities.
+- Buttons can build more infantry, aircraft, and missiles to continue attacks.
+- If no infantry/aircraft/missiles are left, the player receives an alert stating that they have none left.
+- Once both players make a move, a turn is iterated. It does not matter the player order.
+- Even on last turn where one player has no population, they are still allowed to move one last time to attack. This allows for a possible tie where a "Mutually Assured Destruction" has occured.
+
 
 ## Class Player 
 constructor {
