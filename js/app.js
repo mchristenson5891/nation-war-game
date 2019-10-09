@@ -23,7 +23,10 @@ class Player {
         } else if (this.moved === true) {
             alert(this.name + " has already moved!");
             return;
-        }
+        } else if (target[city] < 1) {
+            alert("That city is already destroyed!");
+            return;
+        } 
 
         let damage = Math.floor(Math.random() * (5 - 1) + 1);
         this.infantry -= 1; // remove 1 infantry  
@@ -43,7 +46,10 @@ class Player {
         } else if (this.moved === true) {
             alert(this.name + " has already moved!");
             return;
-        }
+        } else if (target[city] < 1) {
+            alert("That city is already destroyed!");
+            return;
+        } 
         
         let damage = Math.floor(Math.random() * (10-5) + 5);
         this.aircraft -= 1;
@@ -63,7 +69,10 @@ class Player {
         } else if (this.moved === true) {
             alert(this.name + " has already moved!");
             return;
-        }
+        } else if (target[city] < 1) {
+            alert("That city is already destroyed!");
+            return;
+        } 
         
         let damage = Math.floor(Math.random() * (20 - 10) + 10 );
         this.missiles -= 1;
