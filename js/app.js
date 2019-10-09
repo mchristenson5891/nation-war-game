@@ -33,6 +33,7 @@ class Player {
         target[city] -= damage; 
         this.moved = true;
 
+        game.cityImgChange();
         game.turnCheck(); // check on each player action
     }
 
@@ -56,6 +57,7 @@ class Player {
         target[city] -= damage;
         this.moved = true;
 
+        game.cityImgChange();
         game.turnCheck(); // check on each player action
     }
 
@@ -79,6 +81,7 @@ class Player {
         target[city] -= damage;
         this.moved = true;
 
+        game.cityImgChange();
         game.turnCheck(); // check on each player action
     }
 
@@ -150,7 +153,8 @@ const game =  {
 // Turns MUST be tracked each time.
     turnCheck() {
         this.displayStats();
-
+        game.cityImgChange();
+        
         if (game.playerOne.moved === true && game.playerTwo.moved === true) {
             this.turns++;
 
@@ -200,7 +204,7 @@ const game =  {
 
     },
 
-    cityImgChange(target) {
+    cityImgChange() {
     // city will be target[city] from other methods
         //     <div class="row">
     //         <div class="column" id="p1ImageDiv">
@@ -214,10 +218,34 @@ const game =  {
     //                                 <img id="p2CityThree" src="img/smallbuildingsprite.png"> 
     //             </div>
     //         </div>
+        const p1CityOne = document.querySelector('#p1CityOne');
+        const p1CityTwo = document.querySelector('#p1CityTwo');
+        const p1CityThree = document.querySelector('#p1CityThree');
         
-        // if (target.city > 75) {
+        const p2CityOne = document.querySelector('#p2CityOne');
+        const p2CityTwo = document.querySelector('#p2CityTwo');
+        const p2CityThree = document.querySelector('#p2CityThree');
+        
+        if (this.playerOne.cityOne > 75) {
+            p1CityOne.src = "img/largebuildingsprite.png";
+        } else if (this.playerOne.cityOne > 50) {
+            p1CityOne.src = "img/mediumbuildingsprite.png";
+        } else if (this.playerOne.cityOne > 25) {
+            p1CityOne.src = "img/smallbuildingsprite.png"
+        } else {
+            p1CityOne.src = "img/tinybuildingsprite.png";
+        }
 
-        // }
+        if (this.playerOne.cityTwo > 75) {
+            p1CityTwo.src = "img/largebuildingsprite.png";
+        } else if (this.playerOne.cityTwo > 50) {
+            p1CityTwo.src = "img/mediumbuildingsprite.png";
+        } else if (this.playerOne.cityTwo > 25) {
+            p1CityTwo.src = "img/smallbuildingsprite.png"
+        } else {
+            p1CityTwo.src = "img/tinybuildingsprite.png";
+        }
+    
     },
 
     reducer() {
