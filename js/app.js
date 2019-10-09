@@ -200,6 +200,26 @@ const game =  {
 
     },
 
+    cityImgChange(target) {
+    // city will be target[city] from other methods
+        //     <div class="row">
+    //         <div class="column" id="p1ImageDiv">
+    //             <img id="p1CityOne" src="img/largebuildingsprite.png">
+    //                 <img id="p1CityTwo" src="img/mediumbuildingsprite.png">
+    //                     <img id="p1CityThree" src="img/smallbuildingsprite.png">
+    //             </div>
+    //                     <div class="column" id="p2ImageDiv">
+    //                         <img id="p2CityOne" src="img/largebuildingsprite.png">
+    //                             <img id="p2CityTwo" src="img/mediumbuildingsprite.png">
+    //                                 <img id="p2CityThree" src="img/smallbuildingsprite.png"> 
+    //             </div>
+    //         </div>
+        
+        // if (target.city > 75) {
+
+        // }
+    },
+
     reducer() {
         (population, currentCity) => population + currentCity;
     },
