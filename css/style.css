@@ -27,3 +27,7 @@ body {
     width: 70%;
     min-width: 500px;
 }
+
+.jumbotron {
+    background-color: rgba(0, 0, 0, 0.3);
+}
