@@ -234,8 +234,10 @@ const game =  {
             p1CityOne.src = "img/mediumbuildingsprite.png";
         } else if (this.playerOne.cityOne > 25) {
             p1CityOne.src = "img/smallbuildingsprite.png"
-        } else {
+        } else if (this.playerOne.cityOne > 0) {
             p1CityOne.src = "img/tinybuildingsprite.png";
+        } else {
+            p1CityOne.src = "img/destroyedbuilding.png"
         }
 
         if (this.playerOne.cityTwo > 75) {
@@ -244,8 +246,10 @@ const game =  {
             p1CityTwo.src = "img/mediumbuildingsprite.png";
         } else if (this.playerOne.cityTwo > 25) {
             p1CityTwo.src = "img/smallbuildingsprite.png"
-        } else {
+        } else if (this.playerOne.cityTwo > 0) {
             p1CityTwo.src = "img/tinybuildingsprite.png";
+        } else {
+            p1CityTwo.src = "img/destroyedbuilding.png";
         }
 
         if (this.playerOne.cityThree > 75) {
@@ -254,8 +258,10 @@ const game =  {
             p1CityThree.src = "img/mediumbuildingsprite.png";
         } else if (this.playerOne.cityThree > 25) {
             p1CityThree.src = "img/smallbuildingsprite.png"
-        } else {
+        } else if (this.playerOne.cityThree > 0) {
             p1CityThree.src = "img/tinybuildingsprite.png";
+        } else {
+            p1CityThree.src = "img/destroyedbuilding.png";
         }
 
         // game.playerTwo city images
@@ -266,8 +272,10 @@ const game =  {
             p2CityOne.src = "img/mediumbuildingsprite.png";
         } else if (this.playerTwo.cityOne > 25) {
             p2CityOne.src = "img/smallbuildingsprite.png"
-        } else {
+        } else if (this.playerTwo.cityOne > 0) {
             p2CityOne.src = "img/tinybuildingsprite.png";
+        } else {
+            p2CityOne.src = "img/destroyedbuilding.png";
         }
 
         if (this.playerTwo.cityTwo > 75) {
@@ -276,18 +284,22 @@ const game =  {
             p2CityTwo.src = "img/mediumbuildingsprite.png";
         } else if (this.playerTwo.cityTwo > 25) {
             p2CityTwo.src = "img/smallbuildingsprite.png"
-        } else {
+        } else if (this.playerTwo.cityTwo > 0) {
             p2CityTwo.src = "img/tinybuildingsprite.png";
+        } else {
+            p2CityTwo.src = "img/destroyedbuilding.png";
         }
 
         if (this.playerTwo.cityThree > 75) {
-            p1CityThree.src = "img/largebuildingsprite.png";
+            p2CityThree.src = "img/largebuildingsprite.png";
         } else if (this.playerTwo.cityThree > 50) {
-            p1CityThree.src = "img/mediumbuildingsprite.png";
+            p2CityThree.src = "img/mediumbuildingsprite.png";
         } else if (this.playerTwo.cityThree > 25) {
-            p1CityThree.src = "img/smallbuildingsprite.png"
+            p2CityThree.src = "img/smallbuildingsprite.png"
+        } else if (this.playerTwo.cityThree > 0) {
+            p2CityThree.src = "img/tinybuildingsprite.png";
         } else {
-            p1CityThree.src = "img/tinybuildingsprite.png";
+            p2CityThree.src = "img/destroyedbuilding.png";
         }
 
     
