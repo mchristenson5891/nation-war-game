@@ -378,6 +378,7 @@ game.start();
 $('#infantryP2CityOne').on('click', function (e) {
     e.preventDefault();
     game.playerOne.attackInfantry(game.playerTwo, "cityOne");
+    document.querySelector('#attack-img').setAttribute("src", "../img/infantryright.gif");
     console.log(game.playerTwo);
 });
 
@@ -386,6 +387,7 @@ $('#infantryP2CityOne').on('click', function (e) {
 $('#infantryP2CityTwo').on('click', function (e) {
     e.preventDefault();
     game.playerOne.attackInfantry(game.playerTwo, "cityTwo");
+    document.querySelector('#attack-img').setAttribute("src", "../img/infantryright.gif");
     console.log(game.playerTwo);
 });
 
@@ -395,6 +397,7 @@ $('#infantryP2CityTwo').on('click', function (e) {
 $('#infantryP2CityThree').on('click', function (e) {
     e.preventDefault();
     game.playerOne.attackInfantry(game.playerTwo, "cityThree");
+    
     console.log(game.playerTwo);
 });
 

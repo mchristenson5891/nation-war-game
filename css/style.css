@@ -11,23 +11,41 @@ body {
 
 #stats-container {
     position: relative;
-    color: red;
+    /* left: 5px; */
+    height: 200px;
+    padding: 0px;
+    margin: 0px;
+    background: rgb(8,29,49);
+    background: linear-gradient(0deg, rgba(8,29,49,1) 0%, rgba(60,96,130,1) 100%);
+    border-radius: 250px;
+    /* army green */
+    /* background: #4B5320;  */
+    color: yellow;
+    /* font-size: 30px; */
+}
+
+#stats-container #p1StatsList {
+    position: relative;
+    text-align: left;
+    left: 10%;
 }
 
 #stats-container #p2StatsList {
     position: relative;
     bottom: 11.1rem;
     text-align: right;
+    right: 10%;
+
 }
 
-#africa-map {
+/* #africa-map {
     display: block;
     margin-left: auto;
     margin-right: auto;
     height: 100%;
     width: 70%;
     min-width: 500px;
-}
+} */
 
 .jumbotron {
     background-color: rgba(0, 0, 0, 0.3);
@@ -35,8 +53,8 @@ body {
 
 .row {
   position: relative;
-  right: 0px;
-  bottom: 250px;
+  left: 0px;
+  bottom: 220px;
   display: flex;
   flex-wrap: wrap;
   /* padding: 0 4px; */
@@ -45,7 +63,7 @@ body {
 /* Create two equal columns that sits next to each other */
 .column {
   flex: 50%;
-  padding: 0 4px;
+  padding: 0 50px;
 }
 
 .column img {
@@ -55,20 +73,20 @@ body {
 
 .container-fluid {
     position: absolute;
-    top: 520px;
+    top: 590px;
     background-image: url("../img/footerimg.png");
     background-repeat: no-repeat;
 }
 
 .container-fluid #container-left {
     position: relative;
-    top: 225px;
+    top: 210px;
     /* bottom: 10px; */
 }
 
 .container-fluid #container-right {
     position: absolute;
-    top: 225px;
+    top: 210px;
     left: 1080px;
     /* bottom: 10px; */
 }
@@ -81,4 +99,14 @@ body {
    bottom: 120px;
    height: 30px;
    animation: MoveUpDown 1s linear infinite;
+} */
+
+#attack-img {
+    position: relative;
+    /* bottom: 200px;
+    right: 300px; */
+}
+
+/* @keyframes MoveUpDown {
+  50% {bottom: 10px}
 } */
