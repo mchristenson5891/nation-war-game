@@ -464,6 +464,7 @@ $('#missilesP2CityThree').on('click', function (e) {
 $('#buildInfantryP1').on('click', function (e) {
     e.preventDefault();
     game.playerOne.buildInfantry();
+    document.querySelector('#attack-img').setAttribute("src", "img/buildinfantryright.gif");
     console.log(game.playerOne.infantry, " P1 Infantry");
 });
 
@@ -581,6 +582,7 @@ $('#missilesP1CityThree').on('click', function (e) {
 $('#buildInfantryP2').on('click', function (e) {
     e.preventDefault();
     game.playerTwo.buildInfantry();
+    document.querySelector('#attack-img').setAttribute("src", "img/buildinfantryleft.png");
     console.log(game.playerTwo.infantry, " P2 Infantry");
 });
 
