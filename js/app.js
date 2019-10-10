@@ -406,6 +406,7 @@ $('#infantryP2CityThree').on('click', function (e) {
 $('#aircraftP2CityOne').on('click', function (e) {
     e.preventDefault();
     game.playerOne.attackAircraft(game.playerTwo, "cityOne");
+    document.querySelector('#attack-img').setAttribute("src", "img/aircraftright.gif");
     console.log(game.playerTwo);
 });
 
@@ -414,6 +415,7 @@ $('#aircraftP2CityOne').on('click', function (e) {
 $('#aircraftP2CityTwo').on('click', function (e) {
     e.preventDefault();
     game.playerOne.attackAircraft(game.playerTwo, "cityTwo");
+    document.querySelector('#attack-img').setAttribute("src", "img/aircraftright.gif");
     console.log(game.playerTwo);
 });
 
@@ -423,6 +425,7 @@ $('#aircraftP2CityTwo').on('click', function (e) {
 $('#aircraftP2CityThree').on('click', function (e) {
     e.preventDefault();
     game.playerOne.attackAircraft(game.playerTwo, "cityThree");
+    document.querySelector('#attack-img').setAttribute("src", "img/aircraftright.gif");
     console.log(game.playerTwo);
 });
 
@@ -431,6 +434,7 @@ $('#aircraftP2CityThree').on('click', function (e) {
 $('#missilesP2CityOne').on('click', function (e) {
     e.preventDefault();
     game.playerOne.attackMissiles(game.playerTwo, "cityOne");
+    document.querySelector('#attack-img').setAttribute("src", "img/missilesright.gif");
     console.log(game.playerTwo);
 });
 
@@ -439,6 +443,7 @@ $('#missilesP2CityOne').on('click', function (e) {
 $('#missilesP2CityTwo').on('click', function (e) {
     e.preventDefault();
     game.playerOne.attackMissiles(game.playerTwo, "cityTwo");
+    document.querySelector('#attack-img').setAttribute("src", "img/missilesright.gif");
     console.log(game.playerTwo);
 });
 
@@ -448,6 +453,7 @@ $('#missilesP2CityTwo').on('click', function (e) {
 $('#missilesP2CityThree').on('click', function (e) {
     e.preventDefault();
     game.playerOne.attackMissiles(game.playerTwo, "cityThree");
+    document.querySelector('#attack-img').setAttribute("src", "img/missilesright.gif");
     console.log(game.playerTwo);
 });
 
@@ -517,6 +523,7 @@ $('#infantryP1CityThree').on('click', function (e) {
 $('#aircraftP1CityOne').on('click', function (e) {
     e.preventDefault();
     game.playerTwo.attackAircraft(game.playerOne, "cityOne");
+    document.querySelector('#attack-img').setAttribute("src", "img/aircraftleft.gif");
     console.log(game.playerOne);
 });
 
@@ -525,6 +532,7 @@ $('#aircraftP1CityOne').on('click', function (e) {
 $('#aircraftP1CityTwo').on('click', function (e) {
     e.preventDefault();
     game.playerTwo.attackAircraft(game.playerOne, "cityTwo");
+    document.querySelector('#attack-img').setAttribute("src", "img/aircraftleft.gif");
     console.log(game.playerOne);
 });
 
@@ -534,6 +542,7 @@ $('#aircraftP1CityTwo').on('click', function (e) {
 $('#aircraftP1CityThree').on('click', function (e) {
     e.preventDefault();
     game.playerTwo.attackAircraft(game.playerOne, "cityThree");
+    document.querySelector('#attack-img').setAttribute("src", "img/aircraftleft.gif");
     console.log(game.playerOne);
 });
 
@@ -542,6 +551,7 @@ $('#aircraftP1CityThree').on('click', function (e) {
 $('#missilesP1CityOne').on('click', function (e) {
     e.preventDefault();
     game.playerTwo.attackMissiles(game.playerOne, "cityOne");
+    document.querySelector('#attack-img').setAttribute("src", "img/missilesleft.gif");
     console.log(game.playerOne);
 });
 
@@ -550,6 +560,7 @@ $('#missilesP1CityOne').on('click', function (e) {
 $('#missilesP1CityTwo').on('click', function (e) {
     e.preventDefault();
     game.playerTwo.attackMissiles(game.playerOne, "cityTwo");
+    document.querySelector('#attack-img').setAttribute("src", "img/missilesleft.gif");
     console.log(game.playerOne);
 });
 
@@ -559,6 +570,7 @@ $('#missilesP1CityTwo').on('click', function (e) {
 $('#missilesP1CityThree').on('click', function (e) {
     e.preventDefault();
     game.playerTwo.attackMissiles(game.playerOne, "cityThree");
+    document.querySelector('#attack-img').setAttribute("src", "img/missilesleft.gif");
     console.log(game.playerOne);
 });
 
