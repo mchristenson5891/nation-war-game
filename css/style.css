@@ -56,7 +56,7 @@ body {
 .container-fluid {
     position: absolute;
     top: 520px;
-    background-image: url("../img/footerimage.png");
+    background-image: url("../img/footerimg.png");
     background-repeat: no-repeat;
 }
 
@@ -72,3 +72,13 @@ body {
     left: 1080px;
     /* bottom: 10px; */
 }
+
+/* placeholder css */
+/* #img-container {
+   align-self: center;
+   position: absolute;
+   left: 270px;
+   bottom: 120px;
+   height: 30px;
+   animation: MoveUpDown 1s linear infinite;
+} */

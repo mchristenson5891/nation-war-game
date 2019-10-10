@@ -364,6 +364,10 @@ const game =  {
 
 };
 
+// Modal shows up when game loads
+$(window).on('load', function () {
+    $('#myModal').modal('show');
+});
 game.start();
 
 // event handlers
