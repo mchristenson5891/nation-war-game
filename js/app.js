@@ -1,3 +1,6 @@
+const $ = require("jquery");
+require('bootstrap');
+
 class Player {
     constructor(name) {
         // this.cities = [100, 75, 50];
