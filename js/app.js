@@ -1,5 +1,5 @@
-const $ = require("jquery");
-require('bootstrap');
+// const $ = require("jquery");
+// require('bootstrap');
 
 class Player {
     constructor(name) {
