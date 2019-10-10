@@ -10,7 +10,6 @@ GA-SEI-CC-5 JavaScript Video Game
 - Test if onClick functions will work on hot spots.
 - Make onClick methods call attack functions.
 - Switch turns correctly after each player attacks.
-- Implement a minutes timer at the top.
 
 ## User Stories
 - The game gives an alert which starts the game.
