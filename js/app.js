@@ -1,4 +1,4 @@
-// const $ = require("jquery");
+// require("jquery");
 // require('bootstrap');
 
 class Player {
