@@ -35,6 +35,7 @@ class Player {
 
         game.cityImgChange();
         game.turnCheck(); // check on each player action
+        alert(`${target.name} city received ${damage} damage`);
     }
 
     // We will use a Math.random() and Math.floor() to initiate an attack value that has a maximum of 10.
@@ -56,9 +57,10 @@ class Player {
         this.aircraft -= 1;
         target[city] -= damage;
         this.moved = true;
-
+        
         game.cityImgChange();
         game.turnCheck(); // check on each player action
+        alert(`${target.name} city received ${damage} damage`);
     }
 
     // We will use a Math.random() and Math.floor() to initiate an attack value that has a maximum of 20
@@ -83,6 +85,7 @@ class Player {
 
         game.cityImgChange();
         game.turnCheck(); // check on each player action
+        alert(`${target.name} city received ${damage} damage`);
     }
 
     // Player is able to build between 3 to 10 infantry
