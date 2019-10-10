@@ -378,7 +378,7 @@ game.start();
 $('#infantryP2CityOne').on('click', function (e) {
     e.preventDefault();
     game.playerOne.attackInfantry(game.playerTwo, "cityOne");
-    document.querySelector('#attack-img').setAttribute("src", "../img/infantryright.gif");
+    document.querySelector('#attack-img').setAttribute("src", "img/infantryright.gif");
     console.log(game.playerTwo);
 });
 
@@ -387,7 +387,7 @@ $('#infantryP2CityOne').on('click', function (e) {
 $('#infantryP2CityTwo').on('click', function (e) {
     e.preventDefault();
     game.playerOne.attackInfantry(game.playerTwo, "cityTwo");
-    document.querySelector('#attack-img').setAttribute("src", "../img/infantryright.gif");
+    document.querySelector('#attack-img').setAttribute("src", "img/infantryright.gif");
     console.log(game.playerTwo);
 });
 
@@ -397,7 +397,7 @@ $('#infantryP2CityTwo').on('click', function (e) {
 $('#infantryP2CityThree').on('click', function (e) {
     e.preventDefault();
     game.playerOne.attackInfantry(game.playerTwo, "cityThree");
-    
+    document.querySelector('#attack-img').setAttribute("src", "img/infantryright.gif");
     console.log(game.playerTwo);
 });
 
@@ -473,28 +473,32 @@ $('#buildMissilesP1').on('click', function (e) {
 
 // PLAYER 2
 // INFANTRY player two attack player one city ONE
-$('#p1AreaCityOne').on('click', function(e) {
-    e.preventDefault();
-    game.playerTwo.attackInfantry(game.playerOne, "cityOne");
-    console.log(game.playerOne);
-} );
+// $('#p1AreaCityOne').on('click', function(e) {
+//     e.preventDefault();
+//     game.playerTwo.attackInfantry(game.playerOne, "cityOne");
+//     document.querySelector('#attack-img').setAttribute("src", "img/infantryleft.gif");
+//     console.log(game.playerOne);
+// } );
 
 $('#infantryP1CityOne').on('click', function (e) {
     e.preventDefault();
     game.playerTwo.attackInfantry(game.playerOne, "cityOne");
+    document.querySelector('#attack-img').setAttribute("src", "img/infantryleft.gif");
     console.log(game.playerOne);
 });
 
 // INFANTRY player two attack player one city TWO
-$('#p1AreaCityTwo').on('click', function (e) {
-    e.preventDefault();
-    game.playerTwo.attackInfantry(game.playerOne, "cityTwo");
-    console.log(game.playerOne);
-});
+// $('#p1AreaCityTwo').on('click', function (e) {
+//     e.preventDefault();
+//     game.playerTwo.attackInfantry(game.playerOne, "cityTwo");
+//     document.querySelector('#attack-img').setAttribute("src", "img/infantryleft.gif");
+//     console.log(game.playerOne);
+// });
 
 $('#infantryP1CityTwo').on('click', function (e) {
     e.preventDefault();
     game.playerTwo.attackInfantry(game.playerOne, "cityTwo");
+    document.querySelector('#attack-img').setAttribute("src", "img/infantryleft.gif");
     console.log(game.playerOne);
 });
 
@@ -504,6 +508,7 @@ $('#infantryP1CityTwo').on('click', function (e) {
 $('#infantryP1CityThree').on('click', function (e) {
     e.preventDefault();
     game.playerTwo.attackInfantry(game.playerOne, "cityThree");
+    document.querySelector('#attack-img').setAttribute("src", "img/infantryleft.gif");
     console.log(game.playerOne);
 });
 
