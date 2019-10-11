@@ -5,11 +5,10 @@ GA-SEI-CC-5 JavaScript Video Game
 
 - Build Player class and Game object.
 - Build basic constructors, attack methods, build methods
-- Area and Map elements for HTML will be clickable.
 - Gather image(s) and coordinate numbers for area and map
 - Test if onClick functions will work on hot spots.
 - Make onClick methods call attack functions.
-- Switch turns correctly after each player attacks.
+- Switch activity between players correctly after each player attacks.
 
 ## User Stories
 - The game gives an alert which starts the game.
@@ -76,13 +75,4 @@ isGameOver() {
 addAttack() {
     * We must give players more uses of infantry, aircraft, and missiles.
     * Perhaps infantry, aircraft, and missiles can regenerate at different rates. 
-}
-
-randomEvent() {
-    * A random event could trigger certain changes of property values of each player object.
-    * They could take away infantry from a player, or perhaps add more hit points to a city.
-    * Math.random() being less than a decimal number (like 0.5) could determine this chance.
-    * Random events will keep increasing in chance over time to simulate the effects of the war.
-    * "Faulty aircraft" "Military Desertion" "Famine" "Plague" "Business Cycle Events" "Natural Disaster"
-    * "Baby Boom" "Scientific Discovery" "Technological Advancement" "Bio-economic Age" "Future of Work" "Military Fervor"
 }
