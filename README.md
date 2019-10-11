@@ -57,12 +57,6 @@ buildMissiles() {
 
 
 ## game object
-start() {
-    * Game object will instantiate two objects from the Player class. They will represent Player 1 and Player 2
-    * Turns MUST be tracked each time.
-    * Initiate a TIMER in Seconds.
-    ** probably going to involve a setInterval(function(), 1000)
-}
 
 isGameOver() {
     * We must check if the game has ended on each and every turn.
