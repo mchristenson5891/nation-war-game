@@ -1,6 +1,12 @@
 # nation-war-game
 GA-SEI-CC-5 JavaScript Video Game
 
+HTML5
+CSS3
+JavaScript
+jQuery
+Bootstrap
+
 # Nation War Designing.
 
 - Build Player class and Game object.
