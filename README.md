@@ -18,8 +18,7 @@ GA-SEI-CC-5 JavaScript Video Game
 - Buttons can build more infantry, aircraft, and missiles to continue attacks.
 - If no infantry/aircraft/missiles are left, the player receives an alert stating that they have none left.
 - Once both players make a move, a turn is iterated. It does not matter the player order.
-- Even on last turn where one player has no population, they are still allowed to move one last time to attack. This allows for a possible tie where a "Mutually Assured Destruction" has occured.
-
+- Even on last turn where one player has no population, they are still allowed to continue attacking. This allows for a possible tie where a "Mutually Assured Destruction" has occurred. The end is when all cities are gone and all attacks are exhausted.
 
 ## Class Player 
 constructor {
