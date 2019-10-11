@@ -341,16 +341,18 @@ const game =  {
 
         const playerTwoCities = this.playerTwo.cityOne + this.playerTwo.cityTwo + this.playerTwo.cityThree;
         
-        // needs to kill game running
+        // needs to inform players of population losses
         if (playerOneCities < 1) {
-            alert(`Player One has lost all their cities!`);
+            $('#buildMenuButtonLeft').remove();
             this.gameOver = true;
+            alert(`Player One has lost all their cities!`);   
         } else if (playerTwoCities < 1) {
-            alert('Player Two has lost all theri cities!');
+            $('#buildMenuButtonRight').remove();
             this.gameOver = true;
+            alert('Player Two has lost all their cities!');   
         } else if (playerOneCities < 1 && playerTwoCities < 1) {
-            alert(`Mutually Assured Destruction!`);
             this.gameOver = true;
+            alert(`Mutually Assured Destruction!`);
         }
 
     },
@@ -480,12 +482,14 @@ $('#buildInfantryP1').on('click', function (e) {
 $('#buildAircraftP1').on('click', function (e) {
     e.preventDefault();
     game.playerOne.buildAircraft();
+    document.querySelector('#attack-img').setAttribute("src", "img/aircraftbuildright.png");
     console.log(game.playerOne.aircraft, " P1 Aircraft");
 });
 
 $('#buildMissilesP1').on('click', function (e) {
     e.preventDefault();
     game.playerOne.buildMissiles();
+    document.querySelector('#attack-img').setAttribute("src", "img/missilesbuildright.png");
     console.log(game.playerOne.missiles, " P1 Missiles");
 });
 
@@ -598,12 +602,14 @@ $('#buildInfantryP2').on('click', function (e) {
 $('#buildAircraftP2').on('click', function (e) {
     e.preventDefault();
     game.playerTwo.buildAircraft();
+    document.querySelector('#attack-img').setAttribute("src", "img/aircraftbuildleft.png");
     console.log(game.playerTwo.aircraft, " P2 Aircraft");
 });
 
 $('#buildMissilesP2').on('click', function (e) {
     e.preventDefault();
     game.playerTwo.buildMissiles();
+    document.querySelector('#attack-img').setAttribute("src", "img/missilesbuildleft.png");
     console.log(game.playerTwo.missiles, " P2 Missiles");
 });
 
