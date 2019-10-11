@@ -1,6 +1,8 @@
 # nation-war-game
 GA-SEI-CC-5 JavaScript Video Game
 
+https://combatd.github.io/nation-war-game/
+
 HTML5
 CSS3
 JavaScript
