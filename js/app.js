@@ -101,6 +101,8 @@ class Player {
 
         this.infantry += Math.floor(Math.random() * (10 - 3) + 3 );
         this.moved = true;
+
+        game.turnCheck(); // check on each player action
     }
     
     // Player is able to build between 3 to 5 aircraft
@@ -113,6 +115,8 @@ class Player {
         
         this.aircraft += Math.floor(Math.random() * (5 - 3) + 3 );
         this.moved = true;
+
+        game.turnCheck(); // check on each player action
     }
 
     // Player is able to build between 1 to 3 missiles
@@ -125,6 +129,8 @@ class Player {
         
         this.missiles += Math.floor(Math.random() * (3 - 1) + 1);
         this.moved = true;
+
+        game.turnCheck(); // check on each player action
     }
 }
 
